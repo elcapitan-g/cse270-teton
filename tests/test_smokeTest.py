@@ -47,7 +47,6 @@ class TestSmoketests():
   
   def test_join(self):
     self.driver.get("http://127.0.0.1:5500/teton/1.6/join.html")
-    self.driver.find_element(By.LINK_TEXT, "Join").click()
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
     self.driver.find_element(By.NAME, "submit").click()
